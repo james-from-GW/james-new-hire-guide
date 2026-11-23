@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>New Hire Guide</title>
+<title>New GiveWhales Guide</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <style>
@@ -25,7 +25,7 @@
   --gold:#f0c04a;--gold-soft:#2b2210;--navy:#17224d;color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:120px}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
 body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.55 "Inter","SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -39,7 +39,8 @@ button{font:inherit;color:inherit}
 .brand{font-weight:750;font-size:17px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
 .brand:hover{text-decoration:none}
 .brand img{border-radius:8px;display:block}
-nav{display:flex;gap:2px;flex-wrap:wrap;padding:3px;background:var(--soft);border-radius:999px}
+nav{order:3;display:flex;gap:2px;flex-wrap:wrap;padding:3px;background:var(--soft);border-radius:999px;margin-right:auto}
+.top-in:after{content:"";order:2;flex-basis:100%;height:0;margin-top:-14px}
 nav button{border:0;background:none;padding:5px 14px;border-radius:999px;font-size:13px;color:var(--muted);cursor:pointer;transition:all .15s}
 nav button:hover{background:var(--panel);color:var(--ink)}
 nav button[aria-current="page"]{background:var(--panel);color:var(--ink);font-weight:600;box-shadow:0 0 0 1px var(--line)}
@@ -54,9 +55,9 @@ nav button[aria-current="page"]{background:var(--panel);color:var(--ink);font-we
 .page-h h1{font-size:30px;font-weight:700;letter-spacing:-.03em;margin:0 0 6px;line-height:1.15}
 .page-h p{margin:0;color:var(--muted);max-width:70ch}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
-.card>h2{margin:0 0 4px;font-size:16px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.card>h2{margin:0 0 12px;font-size:16px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
 .card>h2 .count{margin-left:auto;color:var(--muted);font-weight:600;font-size:12px;background:var(--soft);padding:2px 10px;border-radius:999px}
-.card>.sub{margin:0 0 16px;color:var(--muted);font-size:14px}
+.card>.sub{margin:-8px 0 16px;color:var(--muted);font-size:14px}
 .pill{display:inline-block;font-size:11px;font-weight:650;letter-spacing:.04em;text-transform:uppercase;padding:2px 9px;border-radius:999px;background:var(--gold-soft);color:var(--gold)}
 
 /* Hero */
@@ -89,6 +90,37 @@ nav button[aria-current="page"]{background:var(--panel);color:var(--ink);font-we
 .msg.do i{color:var(--good)}.msg.dont i{color:var(--bad)}.msg.say i{color:var(--muted)}
 .compact .norm{padding:13px 16px 13px 54px}
 .compact .norm .n{background:var(--soft);color:var(--accent);width:28px;height:28px;border-radius:8px;font-size:13px;top:13px}
+
+/* Home doors */
+.doors{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:16px}
+.door{text-align:left;border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:var(--panel);cursor:pointer;transition:border-color .15s,transform .15s;display:block}
+.door:hover{border-color:var(--accent);transform:translateY(-1px)}
+.door .em{font-size:24px;display:block;margin-bottom:8px}
+.door b{display:block;font-size:17px;letter-spacing:-.01em}
+.door small{display:block;color:var(--muted);font-size:14px;margin:4px 0 12px;line-height:1.5}
+.door i{font-style:normal;font-size:13px;font-weight:600;color:var(--accent)}
+.door i:after{content:" →"}
+.more{color:var(--accent);font-weight:600}
+.more:after{content:" →"}
+.card .tiles{margin-bottom:0}
+
+/* Document */
+.doc{max-width:740px;margin:0 auto;font-size:16.5px;line-height:1.65}
+.doc h1{font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.2;margin:8px 0 6px}
+.doc .byline{color:var(--muted);font-size:14px;margin:0 0 22px}
+.doc h2{font-size:21px;font-weight:700;letter-spacing:-.02em;margin:38px 0 8px;padding-top:6px;scroll-margin-top:130px}
+.doc h2+.lede{color:var(--muted);margin:0 0 14px;font-size:15.5px}
+.doc p{margin:0 0 14px}
+.doc ul,.doc ol{margin:0 0 14px;padding-left:28px}
+.doc li{margin-bottom:8px}
+.doc ol.norms>li{margin-bottom:16px;padding-left:4px;scroll-margin-top:120px}
+.doc ol.norms>li::marker{font-weight:700;color:var(--accent)}
+.doc ol.norms>li:target{background:var(--accent-soft);border-radius:8px;box-shadow:0 0 0 8px var(--accent-soft)}
+.doc ol.norms ul{margin:6px 0 0;padding-left:22px;font-size:15.5px;color:var(--muted)}
+.doc ol.norms ul li{margin-bottom:3px}
+.doc ol.norms ul b{color:var(--ink);font-weight:600}
+.toc{font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:22px 0 0}
+.toc a{color:var(--accent);white-space:nowrap}
 
 /* Filter chips */
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
@@ -147,13 +179,14 @@ footer p{margin:0 0 4px}
 mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;border-radius:3px;padding:0 1px}
 
 @media (max-width:860px){
-  .hero,.grid7{grid-template-columns:1fr}
+  .hero,.grid7,.doors{grid-template-columns:1fr}
+  .doc{font-size:16px}.doc h1{font-size:25px}
   .tiles,.stats{grid-template-columns:repeat(2,1fr)}
   .row,.row.r3{grid-template-columns:1fr;gap:3px}
   .row.r3 .badge{justify-self:start;margin-top:4px}
   nav{border-radius:16px}
-  .top-r{margin-left:0;width:100%}
-  #q{flex:1;width:auto}
+  .top-r{margin-left:auto}
+  #q{width:150px}
   .page-h h1{font-size:25px}
 }
 @media (max-width:480px){.tiles,.stats{grid-template-columns:1fr}.wrap{padding:20px 16px 56px}.top-in{padding:10px 16px}}
@@ -162,15 +195,16 @@ mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;bor
 <body>
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="#norms"><img src="logo.svg" alt="" width="30" height="30"><span>New Hire Guide</span></a>
+    <a class="brand" href="#home"><img src="logo.svg" alt="" width="30" height="30"><span>New GiveWhales Guide</span></a>
     <nav aria-label="Pages">
-      <button type="button" data-go="norms">Norms</button>
+      <button type="button" data-go="home">Home</button>
+      <button type="button" data-go="norms">Norms for success</button>
       <button type="button" data-go="find">Where to find things</button>
-      <button type="button" data-go="facts">Quick facts</button>
+      <button type="button" data-go="facts">Quick facts that James learned</button>
       <button type="button" data-go="first30">First 30 days</button>
     </nav>
     <div class="top-r">
-      <input id="q" type="search" placeholder="Search the guide" aria-label="Search the guide">
+      <input id="q" type="search" placeholder="Search" aria-label="Search the guide">
       <button class="theme" id="themeBtn" type="button">Theme</button>
     </div>
   </div>
@@ -185,60 +219,61 @@ mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;bor
     <div id="searchOut"></div>
   </div>
 
-  <!-- Norms -->
-  <div class="view" id="v-norms">
+  <!-- Home -->
+  <div class="view" id="v-home">
     <div class="page-h">
+      <h1>New GiveWhales Guide</h1>
+      <p>A starter kit for your first weeks at GiveWell: how to work well with the team, where things live, and the facts I had to ask about. Pick a page to start.</p>
+    </div>
+    <div class="doors">
+      <button type="button" class="door" data-go="norms"><span class="em" aria-hidden="true">🤝</span><b>Norms for success</b><small>28 working habits, by topic, that make you easy to work with from week one.</small><i>Read the norms</i></button>
+      <button type="button" class="door" data-go="find"><span class="em" aria-hidden="true">🧭</span><b>Where to find things</b><small>Useful documents and sites James gathered: policies, payroll, benefits, tickets.</small><i>See the full list</i></button>
+      <button type="button" class="door" data-go="facts"><span class="em" aria-hidden="true">💡</span><b>Quick facts that James learned</b><small>Pay dates, time off, holidays, late rides and meals, in one place.</small><i>See the facts</i></button>
+      <button type="button" class="door" data-go="first30"><span class="em" aria-hidden="true">✅</span><b>First 30 days</b><small>Six small things to do in your first month, as a checklist you can tick.</small><i>Open the checklist</i></button>
+    </div>
+    <section class="card">
+      <h2>Quick list: where to find things</h2>
+      <p class="sub">James gathered these. Some may be out of date or not match HR's current guidance, but they are useful documents to know about.</p>
+      <div class="tiles" id="homeTiles"></div>
+      <p class="note"><a class="more" href="#find">See every document, policy and site</a></p>
+    </section>
+  </div>
+
+  <!-- Norms -->
+  <div class="view" id="v-norms" hidden>
+    <article class="doc">
       <h1>Norms for success: a starter guide for new GiveWhales</h1>
-      <p>28 working habits that make you easy to work with from week one, numbered so you can point at them.</p>
-    </div>
-    <div class="hero">
-      <div class="letter">
-        <p>I'm James, GiveWell's incoming chief of staff, and I'm still learning GiveWell's culture. This is a list of practices that help me get the best results from the team, especially around Slack and messaging, that I don't think are necessarily natural or customary for everyone coming to GiveWell.</p>
-        <p>I thought a reference guide to how I actually work might be useful. A caveat: I don't always live up to these ideals myself, and you'll see me break them. These are my suggestions, not rules, and other GiveWhales may reasonably disagree.</p>
-        <div class="sig"><span class="av">JB</span><span>James Bedford, Chief of Staff, Malaria</span></div>
-      </div>
-      <div class="how">
-        <div class="step"><span class="ic">#</span><div><b>React by number</b><span>"Yes to 1 and 4, 3 needs a call." Click a number to copy a link to that norm.</span></div></div>
-        <div class="step"><span class="ic">?</span><div><b>The reason beats the rule</b><span>If a norm doesn't serve its reason in a given case, use judgment.</span></div></div>
-        <div class="step"><span class="ic">7</span><div><b>Start with the first seven</b><span>They cover Slack and messaging. The other 21 are extras.</span></div></div>
-      </div>
-    </div>
-
-    <section class="card">
-      <h2>The seven: Slack and messaging <span class="count">1 to 7</span></h2>
-      <p class="sub">They make messages faster to read, easier to answer and harder to lose.</p>
-      <div class="grid7" id="seven"></div>
-    </section>
-
-    <section class="card">
-      <h2>More norms <span class="pill">Suggestions</span><span class="count">8 to 28</span></h2>
-      <p class="sub">The same idea, extended: make it cheap for the other person to read, answer and act.</p>
-      <div class="chips" id="catChips" role="group" aria-label="Filter by topic"></div>
-      <div class="compact" id="more"></div>
-    </section>
+      <p class="byline">James Bedford, Chief of Staff, Malaria</p>
+      <p>I'm James, GiveWell's incoming chief of staff, and I'm still learning GiveWell's culture. This is a list of practices that help me get the best results from the team, especially around Slack and messaging, that I don't think are necessarily natural or customary for everyone coming to GiveWell.</p>
+      <p>I thought a reference guide to how I actually work might be useful. A caveat: I don't always live up to these ideals myself, and you'll see me break them. These are my suggestions, not rules, and other GiveWhales may reasonably disagree.</p>
+      <h2>How to use this</h2>
+      <ul>
+        <li>Every norm is numbered, so you can react by number ("yes to 1 and 4, 3 needs a call").</li>
+        <li>The reason matters more than the rule. If a norm doesn't serve its reason in a given case, use judgment.</li>
+        <li>Start with the first seven, on Slack and messaging. Norms 8 to 28 are extra suggestions.</li>
+      </ul>
+      <p class="toc" id="toc"></p>
+      <div id="doc"></div>
+    </article>
   </div>
 
   <!-- Find things -->
   <div class="view" id="v-find" hidden>
     <div class="page-h">
       <h1>Where to find things</h1>
-      <p>GiveWell already has an intranet (the GiveWiki) and a Handbook that link to most of this. This is the one-page map of which document and which site to use for what. Links open only for signed-in GiveWell staff.</p>
+      <p>James gathered these in his first weeks at GiveWell. Some may be out of date or not match HR's current guidance, so treat HR and the linked documents as the final word. They are here because they were useful. This page covers US-based staff only. Links open only for signed-in GiveWell staff.</p>
     </div>
     <div class="tiles" id="tiles"></div>
     <section class="card">
       <h2>Start here <span class="count" id="c-start"></span></h2>
-      <p class="sub">The questions every new hire asks in week one, and where the answer lives.</p>
       <div class="rows" id="start"></div>
     </section>
     <section class="card">
       <h2>Key policies <span class="count" id="c-pol"></span></h2>
-      <p class="sub">Skim them once so you know where to look later.</p>
       <div class="rows" id="policies"></div>
     </section>
     <section class="card">
       <h2>Which site for what <span class="count" id="c-sites"></span></h2>
-      <p class="sub">GiveWell uses different systems for US and international staff.</p>
-      <div class="chips" id="whoChips" role="group" aria-label="Filter by location"></div>
       <div class="rows" id="sites"></div>
     </section>
   </div>
@@ -246,20 +281,18 @@ mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;bor
   <!-- Facts -->
   <div class="view" id="v-facts" hidden>
     <div class="page-h">
-      <h1>Quick facts</h1>
-      <p>The things new hires ask about most. The linked policies win if this page disagrees with them.</p>
+      <h1>Quick facts that James learned</h1>
+      <p>James gathered these in his first weeks. Some may be out of date or not match HR's current guidance, so check the linked policies or ask HR before relying on one. US-based staff only.</p>
     </div>
     <div class="stats" id="stats"></div>
     <section class="card">
       <h2>US holidays <span class="count">11 days</span></h2>
-      <p class="sub">You can work a holiday and take another day instead. International staff get the holidays for their location.</p>
-      <div class="hol" id="hol"></div>
+            <div class="hol" id="hol"></div>
     </section>
     <section class="card">
       <h2>Good to know</h2>
-      <p class="sub">Short answers, with the policy to read for the detail.</p>
       <div class="rows" id="know"></div>
-      <p class="note">Checked on Nov 23, 2026 against the Handbook, the Time Off Policy and the Expense Policy.</p>
+      <p class="note">Gathered on Nov 23, 2026 from the Handbook, the Time Off Policy and the Expense Policy.</p>
     </section>
   </div>
 
@@ -278,7 +311,7 @@ mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;bor
 </main>
 
 <footer>
-  <p>A personal guide by James Bedford. Suggestions, not GiveWell policy.</p>
+  <p>New GiveWhales Guide. A personal guide by James Bedford. Suggestions, not GiveWell policy.</p>
   <p>Linked documents keep their own Google sharing settings.</p>
 </footer>
 
@@ -374,7 +407,6 @@ var START=[
 var POL=[
  {k:["Employee Expense Policy",L.expense],v:["Travel, meals, late rides home, stipends, workstation budget, how to use Bill"]},
  {k:["Time Off Policy",L.timeoff],v:["Vacation, sick time, holidays, summer break, leaves, how to record time off"]},
- {k:["Holiday list, all countries",L.holidays],v:["Which days GiveWell is closed where you live"]},
  {k:["Guide to Leaves of Absence",L.leaves],v:["Parental and other leave, step by step"]},
  {k:["Finance Onboarding: Bill",L.bill],v:["Getting set up on your company card and reimbursements"]},
  {k:["Workstation guidelines",L.desk],v:["What you can order for your desk"]},
@@ -385,13 +417,12 @@ var POL=[
 ];
 var SITES=[
  {k:"Paylocity",w:"us",v:["Payroll, pay stubs, W-2s, recording PTO and sick time (",["how-to",L.pto],"), Handbook acknowledgement"]},
- {k:"Rippling",w:"intl",v:["Payroll, time off, benefits, holiday calendar and reimbursements"]},
  {k:"Bill (formerly Divvy)",w:"us",v:["Company card, budgets, receipts, reimbursements"]},
  {k:"Employee Navigator",w:"us",v:["Choosing or changing benefits at open enrollment"]},
  {k:"Navia",w:"us",v:["Commuter benefits (transit and parking), which you can start or stop any time"]},
  {k:"Voya",w:"us",v:["403(b) retirement plan"]},
  {k:"Benefit Advocate Center",w:"us",v:["Problems with health, dental, vision, FSA, life or disability claims (contact details in the Handbook)"]},
- {k:"Sparrow",w:"us",b:"US and Canada",v:["Leave management partner for parental leave"]},
+ {k:"Sparrow",w:"us",v:["Leave management partner for parental leave"]},
  {k:"Carrot",w:"all",v:["Fertility and family-forming benefit"]},
  {k:"Asana",w:"all",v:["Tasks, projects and ops tickets"]},
  {k:"Box",w:"all",v:["Benefit guides, forms and NDA templates"]},
@@ -401,8 +432,8 @@ var SITES=[
  {k:"Lattice",w:"all",v:["An older org chart. Use the GiveWell Live Org Chart for the current one"]}
 ];
 var STATS=[
- {big:"6th + 21st",t:"Pay dates (US)",s:"Twice a month"},
- {big:"31 days",t:"Holidays plus vacation",s:"Per year, combined. The split depends on where you live"},
+ {big:"6th + 21st",t:"Pay dates",s:"Twice a month"},
+ {big:"31 days",t:"Holidays plus vacation",s:"Per year, combined: 11 holidays and 20 vacation days"},
  {big:"10 days",t:"Sick leave",s:"Separate from vacation. Resets each January 1"},
  {big:"July 4 week",t:"Summer break",s:"GiveWell is closed. Extra paid time off"},
  {big:"16 weeks",t:"Paid parental leave",s:"For new parents of all types"},
@@ -410,12 +441,11 @@ var STATS=[
 ];
 var HOL=["New Year's Day","Martin Luther King Jr. Day","Presidents' Day","Memorial Day","Juneteenth","Independence Day","Labor Day","Columbus Day / Indigenous Peoples' Day","Thanksgiving Day","Friday after Thanksgiving","Christmas Day"];
 var KNOW=[
- {k:"Recording time off",v:["Enter it before payroll runs, or it has to be fixed by hand. US staff use Paylocity, international staff use Rippling. See the ",["Time Off Policy",L.timeoff]]},
+ {k:"Recording time off",v:["Enter it before payroll runs, or it has to be fixed by hand. Use Paylocity. See the ",["Time Off Policy",L.timeoff]]},
  {k:"Money you can spend",v:["Wellness stipend, professional development allowance, phone and internet reimbursement, workstation and coworking budgets. Amounts are in the ",["Expense Policy",L.expense]]},
  {k:"Working late or early",v:["A cab or rideshare is covered before 7:00 or after 8:00 PM for a work reason. Ask your manager first if it will be more than once a month"]},
  {k:"Meals",v:["Covered when traveling, with external partners, and at team events on your manager's budget. Dinner when working late is not listed in the policy"]},
- {k:"Benefits enrollment (US)",v:["Open enrollment runs in November for coverage starting December 1, in Employee Navigator"]},
- {k:"Your country's holidays",v:[["Holiday list, all countries",L.holidays]]}
+ {k:"Benefits enrollment",v:["Open enrollment runs in November for coverage starting December 1, in Employee Navigator"]}
 ];
 var TODO=[
  "Ask your manager how they like to receive asks, and how fast they expect replies",
@@ -436,17 +466,13 @@ function el(tag,attrs){
 function link(t,u){return el("a",{href:u,target:"_blank",rel:"noopener",text:t})}
 function parts(v){return v.map(function(p){return Array.isArray(p)?link(p[0],p[1]):p})}
 function $(id){return document.getElementById(id)}
-var EXL={"do":"Do",dont:"Avoid",say:"Reply"};
+var EXL={"do":"Do",dont:"Avoid",say:"Example reply"};
 
-function normCard(o){
-  var num=el("a",{class:"n",href:"#n"+o.n,title:"Copy a link to norm "+o.n,text:String(o.n)});
-  num.addEventListener("click",function(){
-    var u=location.href.split("#")[0]+"#n"+o.n;
-    try{navigator.clipboard.writeText(u)}catch(e){}
-  });
-  var ex=o.ex&&el("div",{class:"ex"},o.ex.map(function(x){return el("div",{class:"msg "+x[0]},el("i",{text:EXL[x[0]]}),x[1])}));
-  return el("article",{class:"norm",id:"n"+o.n,"data-cat":o.c},num,el("h3",{text:o.t}),el("p",{text:o.w}),ex);
+function normItem(o){
+  var ex=o.ex&&el("ul",null,o.ex.map(function(x){return el("li",null,el("b",{text:EXL[x[0]]+": "}),"\u201c"+x[1]+"\u201d")}));
+  return el("li",{id:"n"+o.n,value:String(o.n)},el("b",{text:o.t})," "+o.w,ex);
 }
+function normList(list){return el("ol",{class:"norms"},list.map(normItem))}
 function rowEl(r,who){
   var k=el("div",{class:"k"},Array.isArray(r.k)?link(r.k[0],r.k[1]):r.k);
   var v=el("div",{class:"v"},parts(r.v));
@@ -466,29 +492,25 @@ function chips(host,labels,onPick){
 }
 
 /* render */
-NORMS.filter(function(o){return o.c==="seven"}).forEach(function(o){$("seven").append(normCard(o))});
-function drawMore(cat){
-  var host=$("more");host.textContent="";
-  CATS.forEach(function(c){
-    if(cat!=="all"&&cat!==c)return;
-    host.append(el("div",{class:"group-h",text:c}));
-    host.append(el("div",{class:"grid7"},NORMS.filter(function(o){return o.c===c}).map(normCard)));
-  });
-}
-drawMore("all");
-chips($("catChips"),[["all","All 21"]].concat(CATS.map(function(c){return [c,c]})),drawMore);
+var TOPICS=[["seven","Slack and messaging","The first seven. They make messages faster to read, easier to answer and harder to lose."]].concat(CATS.map(function(c){return [c,c,""]}));
+TOPICS.forEach(function(t,i){
+  var list=NORMS.filter(function(o){return o.c===t[0]}),id="t"+i;
+  $("doc").append(el("h2",{id:id,text:t[1]}));if(t[2])$("doc").append(el("p",{class:"lede",text:t[2]}));$("doc").append(normList(list));
+  var a=el("a",{href:"#"+id,text:t[1]+" ("+list[0].n+" to "+list[list.length-1].n+")"});
+  a.addEventListener("click",function(e){e.preventDefault();$(id).scrollIntoView()});
+  $("toc").append(i?" \u00b7 ":"On this page: ",a);
+});
 
-TILES.forEach(function(t){$("tiles").append(el("a",{class:"tile",href:t.u,target:"_blank",rel:"noopener"},el("span",{class:"em","aria-hidden":"true",text:t.e}),el("b",{text:t.t}),el("small",{text:t.s})))});
+["tiles","homeTiles"].forEach(function(h){TILES.forEach(function(t){$(h).append(el("a",{class:"tile",href:t.u,target:"_blank",rel:"noopener"},el("span",{class:"em","aria-hidden":"true",text:t.e}),el("b",{text:t.t}),el("small",{text:t.s})))})});
 START.forEach(function(r){$("start").append(rowEl(r))});$("c-start").textContent=START.length;
 POL.forEach(function(r){$("policies").append(rowEl(r))});$("c-pol").textContent=POL.length;
 function drawSites(w){
   var host=$("sites");host.textContent="";
   var list=SITES.filter(function(r){return w==="any"||r.w===w||r.w==="all"});
-  list.forEach(function(r){host.append(rowEl(r,true))});
+  list.forEach(function(r){host.append(rowEl(r))});
   $("c-sites").textContent=list.length;
 }
 drawSites("any");
-chips($("whoChips"),[["any","Everyone"],["us","I'm in the US"],["intl","I'm outside the US"]],drawSites);
 
 STATS.forEach(function(s){$("stats").append(el("div",{class:"stat"},el("div",{class:"big",text:s.big}),el("b",{text:s.t}),el("small",{text:s.s})))});
 HOL.forEach(function(h){$("hol").append(el("span",{text:h}))});
@@ -509,30 +531,30 @@ TODO.forEach(function(t,i){
 prog();
 
 /* views */
-var VIEWS=["norms","find","facts","first30"],cur="norms";
+var VIEWS=["home","norms","find","facts","first30"],cur="home";
 function show(v,keepScroll){
-  if(VIEWS.indexOf(v)<0)v="norms";cur=v;
+  if(VIEWS.indexOf(v)<0)v="home";cur=v;
   VIEWS.forEach(function(x){$("v-"+x).hidden=x!==v});
   $("v-search").hidden=true;
   [].forEach.call(document.querySelectorAll("nav button"),function(b){if(b.dataset.go===v)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
   if(!keepScroll)window.scrollTo(0,0);
 }
-[].forEach.call(document.querySelectorAll("nav button"),function(b){
+[].forEach.call(document.querySelectorAll("[data-go]"),function(b){
   b.addEventListener("click",function(){$("q").value="";history.replaceState(null,"","#"+b.dataset.go);show(b.dataset.go)});
 });
 function route(){
   var h=location.hash.slice(1);
-  if(/^n\d+$/.test(h)){show("norms",true);if(!$(h)){drawMore("all");[].forEach.call($("catChips").children,function(c,i){c.setAttribute("aria-pressed",i===0?"true":"false")})}var t=$(h);if(t)t.scrollIntoView({block:"center"});return}
-  show(h||"norms",!h);
+  if(/^[nt]\d+$/.test(h)){show("norms",true);var t=$(h);if(t)t.scrollIntoView({block:/^n/.test(h)?"center":"start"});return}
+  show(h||"home",!h);
 }
 window.addEventListener("hashchange",route);route();
 
 /* search across everything */
 var INDEX=[];
-NORMS.forEach(function(o){INDEX.push({kind:"Norm "+o.n,text:o.t+" "+o.w+" "+(o.ex||[]).map(function(x){return x[1]}).join(" "),make:function(){return normCard(o)}})});
+NORMS.forEach(function(o){INDEX.push({kind:"Norm "+o.n,text:o.t+" "+o.w+" "+(o.ex||[]).map(function(x){return x[1]}).join(" "),make:function(){return normItem(o)}})});
 function flat(r){return (Array.isArray(r.k)?r.k[0]:r.k)+" "+r.v.map(function(p){return Array.isArray(p)?p[0]:p}).join("")}
 [[START,"Start here"],[POL,"Policy"],[SITES,"Site"],[KNOW,"Good to know"]].forEach(function(g){
-  g[0].forEach(function(r){INDEX.push({kind:g[1],text:flat(r),make:function(){return rowEl(r,g[0]===SITES)}})});
+  g[0].forEach(function(r){INDEX.push({kind:g[1],text:flat(r),make:function(){return rowEl(r)}})});
 });
 STATS.forEach(function(s){INDEX.push({kind:"Quick fact",text:s.big+" "+s.t+" "+s.s,make:function(){return el("div",{class:"row"},el("div",{class:"k",text:s.t}),el("div",{class:"v",text:s.big+". "+s.s}))}})});
 INDEX.push({kind:"Quick fact",text:"US holidays "+HOL.join(" "),make:function(){return el("div",{class:"row"},el("div",{class:"k",text:"US holidays (11)"}),el("div",{class:"v",text:HOL.join(", ")}))}});
@@ -547,7 +569,7 @@ $("q").addEventListener("input",function(){
   $("searchSum").textContent=hits.length?hits.length+(hits.length===1?" result":" results")+" for \""+this.value.trim()+"\"":"";
   if(!hits.length){out.append(el("div",{class:"empty",text:"Nothing in the guide matches \""+this.value.trim()+"\". Try the Handbook, or ask in #hr-help."}));return}
   var norms=hits.filter(function(h){return /^Norm/.test(h.kind)}),rest=hits.filter(function(h){return !/^Norm/.test(h.kind)});
-  if(norms.length)out.append(el("section",{class:"card"},el("h2",null,"Norms",el("span",{class:"count",text:String(norms.length)})),el("div",{class:"grid7 compact"},norms.map(function(h){return h.make()}))));
+  if(norms.length)out.append(el("section",{class:"card"},el("h2",null,"Norms",el("span",{class:"count",text:String(norms.length)})),el("div",{class:"doc",style:"margin:0;max-width:none"},el("ol",{class:"norms"},norms.map(function(h){return h.make()})))));
   if(rest.length)out.append(el("section",{class:"card"},el("h2",null,"Where to find things",el("span",{class:"count",text:String(rest.length)})),el("div",{class:"rows"},rest.map(function(h){return h.make()}))));
 });
 
