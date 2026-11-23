@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Hire Guide</title>
+<style>
+:root{--bg:#f6f7f4;--panel:#ffffff;--ink:#1c2321;--muted:#5d6b66;--line:#dfe4df;--accent:#1f6f5c;--accent-soft:#e3f1ec;--mark:#fff3bf}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121615;--panel:#1a201e;--ink:#e8eeeb;--muted:#9aa8a2;--line:#2c3532;--accent:#6fcdb3;--accent-soft:#1f302b;--mark:#5a4a00}}
+:root[data-theme="dark"]{--bg:#121615;--panel:#1a201e;--ink:#e8eeeb;--muted:#9aa8a2;--line:#2c3532;--accent:#6fcdb3;--accent-soft:#1f302b;--mark:#5a4a00}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{max-width:1120px;margin:0 auto;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:700;font-size:18px;margin-right:auto}
+.brand small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+#q{flex:1 1 220px;max-width:360px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:16px;display:grid;grid-template-columns:220px 1fr;gap:28px}
+nav{position:sticky;top:76px;align-self:start;font-size:14px}
+nav a{display:block;padding:6px 10px;border-radius:6px;text-decoration:none;color:var(--ink)}
+nav a:hover{background:var(--accent-soft)}
+nav .sub{padding-left:22px;color:var(--muted)}
+main{min-width:0}
+section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:20px}
+h1{font-size:28px;margin:0 0 6px}
+h2{font-size:21px;margin:0 0 10px;scroll-margin-top:84px}
+h3{font-size:16px;margin:22px 0 8px;color:var(--accent);scroll-margin-top:84px}
+p{margin:0 0 12px}
+.lead{color:var(--muted)}
+.norm{padding:10px 0;border-top:1px solid var(--line)}
+.norm:first-of-type{border-top:0}
+.norm b{display:block}
+.eg{color:var(--muted);font-size:15px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:middle}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+th{border-top:0;color:var(--muted);font-weight:600;font-size:13px}
+ol,ul{margin:0 0 12px;padding-left:22px}
+li{margin-bottom:8px}
+.check{list-style:none;padding-left:0}
+.check li{padding-left:26px;position:relative}
+.check li:before{content:"";position:absolute;left:0;top:4px;width:15px;height:15px;border:2px solid var(--accent);border-radius:4px}
+.hide{display:none}
+#none{display:none;color:var(--muted)}
+footer{max-width:1120px;margin:0 auto;padding:8px 16px 40px;color:var(--muted);font-size:13px}
+@media (max-width:820px){.wrap{grid-template-columns:1fr}nav{position:static;display:flex;flex-wrap:wrap;gap:4px}nav .sub{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">New Hire Guide<small>Working norms and where to find things</small></div>
+    <input id="q" type="search" placeholder="Search norms, policies, sites..." aria-label="Search this page">
+  </div>
+</header>
+
+<div class="wrap">
+<nav aria-label="Sections">
+  <a href="#about">About this guide</a>
+  <a href="#norms">Messaging norms</a>
+  <a href="#more">More norms</a>
+  <a class="sub" href="#asks">Asks and decisions</a>
+  <a class="sub" href="#slack">Slack habits</a>
+  <a class="sub" href="#docs">Docs</a>
+  <a class="sub" href="#meetings">Meetings</a>
+  <a class="sub" href="#new">Being new</a>
+  <a href="#find">Where to find things</a>
+  <a class="sub" href="#start">Start here</a>
+  <a class="sub" href="#policies">Key policies</a>
+  <a class="sub" href="#sites">Which site for what</a>
+  <a class="sub" href="#facts">Quick facts</a>
+  <a href="#first30">First 30 days</a>
+</nav>
+
+<main>
+<section id="about">
+  <h1>Norms for success: a starter guide for new GiveWhales</h1>
+  <p>I'm James, GiveWell's incoming chief of staff, and I'm still learning GiveWell's culture. This is a list of practices that help me get the best results from the team, especially around Slack and messaging, that I don't think are necessarily natural or customary for everyone coming to GiveWell.</p>
+  <p>I thought a reference guide to how I actually work might be useful. A caveat: I don't always live up to these ideals myself, and you'll see me break them. These are my suggestions, not rules, and other GiveWhales may reasonably disagree.</p>
+  <p class="lead">Every norm is numbered, so you can react by number ("yes to 1 and 4, 3 needs a call"). The reason matters more than the rule: if a norm doesn't serve its reason in a given case, use judgment.</p>
+  <p id="none">Nothing on this page matches that search.</p>
+</section>
+
+<section id="norms">
+  <h2>Slack and messaging norms</h2>
+  <p class="lead">These seven make messages faster to read, easier to answer and harder to lose.</p>
+  <div class="norm"><b>1. Reply in thread wherever you can.</b> Threads keep a channel scannable and keep the context in one place. Post at the top level only when the whole group needs the context, or when the thread has changed subject in a way others would want to see.</div>
+  <div class="norm"><b>2. Put the subject in the first five words.</b> People triage channels from the preview line. <span class="eg">Example: "Writing a reply to the reporter's email, and..." or "Sharing John's CE modeling thoughts".</span></div>
+  <div class="norm"><b>3. For time-sensitive things, state a default action.</b> Silence then moves the work forward instead of stalling it. <span class="eg">Example: "James emailed us asking for a reply on scheduling. I plan to respond by Thursday noon ET with option B, unless someone replies otherwise."</span></div>
+  <div class="norm"><b>4. Use numbered bullets, not round ones.</b> Numbers let people answer precisely. <span class="eg">Example replies: "Yes to 1, 2 and 4, but 3 needs a call" or "I follow the others, but what does 3 mean?"</span></div>
+  <div class="norm"><b>5. If a message will draw replies to several parts, make it a Google Doc.</b> Comments and suggestions then attach to the specific line, not to a long thread. Post the link with a one-line summary and the question you want answered.</div>
+  <div class="norm"><b>6. If something needs a decision, tag one person by name to own it.</b> A name creates a notification and an owner. A general question creates neither. <span class="eg">Example: "@James, or someone else if better placed, please reply to this email" and not "Can somebody respond to this email?"</span></div>
+  <div class="norm"><b>7. Hyperlink every document you mention.</b> Readers should be one click from the source. <span class="eg">Example: "this doc says X and this doc says Y", with both phrases linked.</span></div>
+</section>
+
+<section id="more">
+  <h2>More norms <span class="tag">suggestions</span></h2>
+  <p class="lead">These extend the same idea: make it cheap for the other person to read, answer and act.</p>
+
+  <h3 id="asks">Asks and decisions</h3>
+  <div class="norm"><b>8. Lead with the ask, then give the context.</b> Busy readers answer in slivers of time and may only read the first line. <span class="eg">Example: "I plan to do X, though I could do Y. Does X seem right?" followed by background.</span></div>
+  <div class="norm"><b>9. Make every ask answerable with a yes, a no, a date or a name.</b> Avoid "thoughts?" and "please review". If someone has to read a doc, name the section and the question. <span class="eg">Example: "Can you read section 3 and tell me whether Dec 12 works."</span></div>
+  <div class="norm"><b>10. Give every ask a by-date, and say whether it is flexible.</b> "By Wednesday, flexible to Friday" lets people prioritize honestly.</div>
+  <div class="norm"><b>11. Propose, don't ask permission.</b> "I'll send this at 3 PM ET unless you'd rather send it" is faster for everyone than "Do you want to send it or shall I?"</div>
+  <div class="norm"><b>12. Bring a recommendation, the alternative, and how you could be wrong.</b> A recommendation alone asks the reader to trust you. The alternative and the stakes let them check you quickly.</div>
+  <div class="norm"><b>13. Say what a claim rests on.</b> "The grantee says now is the moment" is different from "now is the moment". "I haven't worked out why yet" beats a plausible guess. This matters more at GiveWell than at most places.</div>
+  <div class="norm"><b>14. Flag a slip the moment you see it coming.</b> Say the date is at risk, give the new date, and say what else moves. A late warning costs more than the slip.</div>
+
+  <h3 id="slack">Slack habits</h3>
+  <div class="norm"><b>15. Close the loop.</b> React or reply so the sender knows you saw it. Say when it is done. If you will not get to it, say that too.</div>
+  <div class="norm"><b>16. Default to a channel over a DM.</b> Others can learn from the answer, and the next new hire can search for it. Keep DMs for sensitive or personal matters.</div>
+  <div class="norm"><b>17. Write times with a time zone, and add the reader's zone.</b> GiveWell works across Pacific, Eastern and UK/Europe. <span class="eg">Example: "10 AM PT / 1 PM ET / 6 PM UK".</span></div>
+  <div class="norm"><b>18. Don't expect or imply an off-hours reply.</b> Use scheduled send for messages written late. If something is urgent, say so in the first words and say how to reach you.</div>
+  <div class="norm"><b>19. If it is a task, put it in Asana with an owner and a due date.</b> Slack-only requests get lost. Link the Slack thread in the task for context.</div>
+
+  <h3 id="docs">Docs</h3>
+  <div class="norm"><b>20. Start every doc with the bottom line, the owner, the date and the status.</b> A reader should know in ten seconds what the doc concludes and whether it is still live.</div>
+  <div class="norm"><b>21. Check sharing settings before you link a doc.</b> A link the reader cannot open costs a round trip.</div>
+  <div class="norm"><b>22. Comment with a named person and a specific question, and suggest edits in suggestion mode.</b> Resolve comments once handled so open comments mean open issues.</div>
+
+  <h3 id="meetings">Meetings</h3>
+  <div class="norm"><b>23. Send the agenda and any preread a day ahead, and link them in the invite.</b> If people have read it, skip the voiceover and go straight to discussion.</div>
+  <div class="norm"><b>24. End every meeting with decisions, owners and dates, and post them within a day.</b> Post in the relevant thread or channel so people who were not in the room can see them.</div>
+
+  <h3 id="new">Being new</h3>
+  <div class="norm"><b>25. Ask "why?" early and often, in public channels.</b> Your fresh eyes are useful for a short window. Keep a running list of what confused you: it is the best input to the next version of this guide.</div>
+  <div class="norm"><b>26. Learn how your manager likes to work, and tell them how you do.</b> Ask whether they have a "working with me" doc. If not, cover it in an early 1:1: how they like asks, how fast they expect replies, how they give feedback.</div>
+  <div class="norm"><b>27. Share work early and rough.</b> A half-finished outline on day two gets better direction than a polished draft on day ten.</div>
+  <div class="norm"><b>28. Check names, numbers and dates before you send.</b> Small errors in a shared tracker or message spread to everyone who reads it.</div>
+</section>
+
+<section id="find">
+  <h2>Where to find things</h2>
+  <p class="lead">GiveWell already has an intranet (the GiveWiki) and a Handbook that link to most of this. This is a one-page map of which document and which site to use for what. Links open only for signed-in GiveWell staff. Checked on Nov 23, 2026 against the Handbook, the Time Off Policy and the Expense Policy. Those documents win if this page disagrees with them.</p>
+
+  <h3 id="start">Start here</h3>
+  <div class="tw"><table>
+    <tr><th>If you need</th><th>Go to</th></tr>
+    <tr><td>The front door for policies, people and processes</td><td><a href="https://docs.google.com/document/d/1jEvfL7zKM44WMBRVkuRZxuXrRPD8kBqlYf8KxLze-Ac/edit">GiveWell Handbook</a> (owned by People Ops)</td></tr>
+    <tr><td>The intranet</td><td>GiveWiki, for example its <a href="https://sites.google.com/givewell.org/givewiki/operations/people/benefits">benefits pages</a> and <a href="https://sites.google.com/givewell.org/givewiki/operations/people/performance-reviews">performance reviews page</a></td></tr>
+    <tr><td>Anything from IT, HR, Finance, Office, Events or Website</td><td><a href="https://form.asana.com/?k=x4qAiOxWHaeE3tWYUeDxXA&amp;d=143921582726">Operations ticket form</a>. Pick "Other" if unsure and it gets routed</td></tr>
+    <tr><td>A quick HR question</td><td>#hr-help in Slack, or the HR inbox</td></tr>
+    <tr><td>A tech question for the hive mind</td><td>#apps-discussion in Slack</td></tr>
+    <tr><td>Who to ask about a topic</td><td><a href="https://docs.google.com/document/d/1K8zS4a26RSbFSB2d6oc6dzEGwW2zJdJxaSeDFJfcTnA/edit">Domain Expertise Guide</a></td></tr>
+    <tr><td>Someone's contact details</td><td><a href="https://docs.google.com/spreadsheets/d/1HByAJbQII1N8-a-0T83j7HTjJiUJ4gPkd9piX0PCkNw/edit#gid=1522791623">Staff directory</a></td></tr>
+    <tr><td>The org chart</td><td><a href="https://claude.ai/artifact/6C8nmCvvNyAPAxKRJArZQJ">GiveWell Live Org Chart</a> (the Claude version, and the most current). Lattice has an older one</td></tr>
+    <tr><td>What an acronym or emoji means</td><td><a href="https://docs.google.com/document/d/1HRKQGPUt6CPujhIy4KMaKUiO7HHH1ziuSXt7kLrZieI/edit">Acronym Dictionary</a> and <a href="https://docs.google.com/document/d/1oBPumSwQb6Y-Zux5CUV-RTRQzG278BdoRSAVK4wR64Q/edit">Emoji Dictionary</a></td></tr>
+    <tr><td>This year's goals</td><td><a href="https://docs.google.com/document/d/12u9jKwiS8GotZcxudsfGqzW6dRmol57EYBYzaVG3oJY/edit?tab=t.0#heading=h.ds2aazu2lc1f">2026 GiveWell Goals</a></td></tr>
+  </table></div>
+
+  <h3 id="policies">Key policies</h3>
+  <div class="tw"><table>
+    <tr><th>Policy</th><th>What it answers</th></tr>
+    <tr><td><a href="https://docs.google.com/document/d/17zTNFhcCaNy0hHZh2D_IZyRru5rQWNapQwxVgUHDnxs/edit">Employee Expense Policy</a></td><td>Travel, meals, late rides home, stipends, workstation budget, how to use Bill</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/1HegDf7uU8wDUAgPMy-3GOEQGsgQRaxflYZeXkqP-D8c/edit">Time Off Policy</a></td><td>Vacation, sick time, holidays, summer break, leaves, how to record time off</td></tr>
+    <tr><td><a href="https://docs.google.com/spreadsheets/d/1JrHzwwwEmPpMqlnC0_qB4UM6CNCshxJHXk27AD0Zy6o/edit?gid=0#gid=0">Holiday list, all countries</a></td><td>Which days GiveWell is closed where you live</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/1h6ZAUP02-mRv2PGMDb-GuomvTB6F1rSJNepKNkIdSNY/edit?tab=t.0">Guide to Leaves of Absence</a></td><td>Parental and other leave, step by step</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/1s1flqQt-Y_RnDX_zzzXZyy9eX0NDBB8HIoRyJy0qzOo/edit?tab=t.0">Finance Onboarding: Bill</a></td><td>Getting set up on your company card and reimbursements</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/1syLRvJWiaFkoLXzypRcveKhq9sRX3vAgKCaFxpjsqpE/edit?tab=t.0#heading=h.866z1j2yjx9a">Workstation guidelines</a></td><td>What you can order for your desk</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/19_sU7H0WCSLy2squ055O-PpOL2BlZG1TrBKRUJvb5JU/edit?tab=t.0#heading=h.uz6cj3sh1y34">Tech Intro</a> and <a href="https://docs.google.com/document/d/1gxusmXW2IOS0x7YHUylvESZnDmqDeffDPC_hjscdXyU/edit#heading=h.b6rsorghpp6u">Computer Use Policy</a></td><td>Accounts, devices and what is allowed on them</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/1sUZH6WeiMyWh9C8fA5D0gOZr6Mn3F60w8H43-f1un-g/edit?tab=t.0">Virtual Meeting AI Policy</a> and <a href="https://docs.google.com/document/d/1WNRnNaFTTd64ju0eUepgHxnyFO3UCTPaRSidjZEkUvo/edit?usp=sharing">AI Playbook</a></td><td>Recording meetings and using AI tools</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/14opr69lIZ13-9r1PGpMTFA9ODZ2oxCDqd7whQCMQ6Qo/edit?tab=t.0">Guidance for International Travel</a></td><td>Research-specific travel guidance</td></tr>
+    <tr><td><a href="https://docs.google.com/document/d/14Y5j7kNF6OcqX-RageNrn2M6LHW2KC9or8qQP1Mt5p0/edit?tab=t.0">Compensation and Career Advancement</a></td><td>How pay and levels work</td></tr>
+  </table></div>
+
+  <h3 id="sites">Which site for what</h3>
+  <div class="tw"><table>
+    <tr><th>Site</th><th>Use it for</th><th>Who</th></tr>
+    <tr><td>Paylocity</td><td>Payroll, pay stubs, W-2s, recording PTO and sick time (<a href="https://docs.google.com/document/d/1_H5EgrCPwiMIPn90PLRQENoKjS7cNzcrBX6EEkDqFv4/edit">how-to</a>), Handbook acknowledgement</td><td>US staff</td></tr>
+    <tr><td>Rippling</td><td>Payroll, time off, benefits and holiday calendar</td><td>International staff</td></tr>
+    <tr><td>Bill (formerly Divvy)</td><td>Company card, budgets, receipts, reimbursements</td><td>US staff. Non-US staff reimburse through Rippling</td></tr>
+    <tr><td>Employee Navigator</td><td>Choosing or changing benefits at open enrollment</td><td>US staff</td></tr>
+    <tr><td>Navia</td><td>Commuter benefits (transit and parking), which you can start or stop any time</td><td>US staff</td></tr>
+    <tr><td>Voya</td><td>403(b) retirement plan</td><td>US staff</td></tr>
+    <tr><td>Carrot</td><td>Fertility and family-forming benefit</td><td>All staff</td></tr>
+    <tr><td>Lattice</td><td>An older org chart. Use the GiveWell Live Org Chart above for the current one</td><td>All staff</td></tr>
+    <tr><td>Asana</td><td>Tasks, projects and ops tickets</td><td>All staff</td></tr>
+    <tr><td>Box</td><td>Benefit guides, forms and NDA templates</td><td>All staff</td></tr>
+    <tr><td>Ethena</td><td>Required compliance training in week one</td><td>All staff</td></tr>
+    <tr><td>LastPass</td><td>Passwords</td><td>All staff</td></tr>
+    <tr><td>Ignition</td><td>Outside IT vendor. Tech tickets may be answered by them by email</td><td>All staff</td></tr>
+    <tr><td>Benefit Advocate Center</td><td>Problems with health, dental, vision, FSA, life or disability claims (contact details in the Handbook)</td><td>US staff</td></tr>
+    <tr><td>Sparrow</td><td>Leave management partner for parental leave</td><td>US and Canada</td></tr>
+  </table></div>
+
+  <h3 id="facts">Quick facts new hires ask about</h3>
+  <ol>
+    <li><b>Pay dates (US):</b> the 6th and 21st of each month.</li>
+    <li><b>Time off:</b> 31 days a year of holidays plus vacation combined, 10 sick days, and the office closes the week of July 4. Record time off before payroll runs, or it has to be fixed by hand.</li>
+    <li><b>US holidays (11):</b> New Year's Day, Martin Luther King Jr. Day, Presidents' Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day/Indigenous Peoples' Day, Thanksgiving, the Friday after, and Christmas Day. You can work a holiday and take another day instead.</li>
+    <li><b>Money you can spend:</b> see the Expense Policy for the wellness stipend, professional development allowance, phone and internet reimbursement, workstation budget and coworking budget.</li>
+    <li><b>Working late or early:</b> a cab or rideshare is covered before 7:00 or after 8:00 PM for a work reason. Ask your manager first if it will be more than once a month.</li>
+    <li><b>Meals:</b> covered when traveling, with external partners, and at team events on your manager's budget. Dinner when working late is not listed in the policy.</li>
+    <li><b>Benefits enrollment (US):</b> open enrollment runs in November for coverage starting December 1, in Employee Navigator.</li>
+  </ol>
+</section>
+
+<section id="first30">
+  <h2>First 30 days: a short checklist</h2>
+  <ul class="check">
+    <li>Ask your manager how they like to receive asks, and how fast they expect replies</li>
+    <li>Find out which channels your team uses for what, and where decisions get recorded</li>
+    <li>Set your Slack profile with your time zone and working hours</li>
+    <li>Learn where your team tracks tasks, and put your own there from day one</li>
+    <li>Start a "things that confused me" list and share it with your manager at week four</li>
+    <li>Try norms 1 to 7 on your first ten channel posts</li>
+  </ul>
+</section>
+</main>
+</div>
+
+<footer>A personal guide by James Bedford. Suggestions, not GiveWell policy.</footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),none=document.getElementById('none');
+  var items=[].slice.call(document.querySelectorAll('.norm, main tr, main ol li, main ul li'));
+  q.addEventListener('input',function(){
+    var t=q.value.trim().toLowerCase(),hits=0;
+    items.forEach(function(el){
+      if(el.querySelector&&el.querySelector('th')){return}
+      var show=!t||el.textContent.toLowerCase().indexOf(t)>-1;
+      el.classList.toggle('hide',!show);if(show)hits++;
+    });
+    none.style.display=(t&&!hits)?'block':'none';
+  });
+})();
+</script>
+</body>
+</html>
