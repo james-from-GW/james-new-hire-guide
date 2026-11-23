@@ -342,7 +342,13 @@ var L={
   aiplay:D+"1WNRnNaFTTd64ju0eUepgHxnyFO3UCTPaRSidjZEkUvo/edit?usp=sharing",
   travel:D+"14opr69lIZ13-9r1PGpMTFA9ODZ2oxCDqd7whQCMQ6Qo/edit?tab=t.0",
   comp:D+"14Y5j7kNF6OcqX-RageNrn2M6LHW2KC9or8qQP1Mt5p0/edit?tab=t.0",
-  pto:D+"1_H5EgrCPwiMIPn90PLRQENoKjS7cNzcrBX6EEkDqFv4/edit"
+  pto:D+"1_H5EgrCPwiMIPn90PLRQENoKjS7cNzcrBX6EEkDqFv4/edit",
+  paylocity:"https://login.paylocity.com/Escher/Escher_WebUI/employeeselfservice/home/index?area=employees&view=EmployeePortal&HelpPageQueryString=View",
+  billapp:"https://app.divvy.co/login",
+  voya:"http://www.voyaretirementplans.com",
+  lattice:"https://givewell.latticehq.com/login",
+  carrot:"https://www.get-carrot.com/employee-support",
+  asana:"https://app.asana.com/"
 };
 
 /* ex: [kind, text] where kind is do | dont | say */
@@ -416,20 +422,20 @@ var POL=[
  {k:["Compensation and Career Advancement",L.comp],v:["How pay and levels work"]}
 ];
 var SITES=[
- {k:"Paylocity",w:"us",v:["Payroll, pay stubs, W-2s, recording PTO and sick time (",["how-to",L.pto],"), Handbook acknowledgement"]},
- {k:"Bill (formerly Divvy)",w:"us",v:["Company card, budgets, receipts, reimbursements"]},
- {k:"Employee Navigator",w:"us",v:["Choosing or changing benefits at open enrollment"]},
+ {k:["Paylocity",L.paylocity],w:"us",v:[["Payroll, pay stubs and W-2s",L.paylocity],", ",["recording PTO and sick time",L.pto]," (rules in the ",["Time Off Policy",L.timeoff],"), and the Handbook acknowledgement"]},
+ {k:["Bill (formerly Divvy)",L.billapp],w:"us",v:["Company card, budgets, receipts, reimbursements (",["setup guide",L.bill],", ",["Expense Policy",L.expense],")"]},
+ {k:"Employee Navigator",w:"us",v:["Choosing or changing benefits at open enrollment (see the ",["benefits pages",L.wikiBen],")"]},
  {k:"Navia",w:"us",v:["Commuter benefits (transit and parking), which you can start or stop any time"]},
- {k:"Voya",w:"us",v:["403(b) retirement plan"]},
- {k:"Benefit Advocate Center",w:"us",v:["Problems with health, dental, vision, FSA, life or disability claims (contact details in the Handbook)"]},
- {k:"Sparrow",w:"us",v:["Leave management partner for parental leave"]},
- {k:"Carrot",w:"all",v:["Fertility and family-forming benefit"]},
- {k:"Asana",w:"all",v:["Tasks, projects and ops tickets"]},
+ {k:["Voya",L.voya],w:"us",v:["403(b) retirement plan"]},
+ {k:"Benefit Advocate Center",w:"us",v:["Problems with health, dental, vision, FSA, life or disability claims (contact details in the ",["Handbook",L.handbook],")"]},
+ {k:"Sparrow",w:"us",v:["Leave management partner for parental leave (see the ",["Guide to Leaves of Absence",L.leaves],")"]},
+ {k:["Carrot",L.carrot],w:"all",v:["Fertility and family-forming benefit"]},
+ {k:["Asana",L.asana],w:"all",v:["Tasks, projects and ",["ops tickets",L.ticket]]},
  {k:"Box",w:"all",v:["Benefit guides, forms and NDA templates"]},
  {k:"Ethena",w:"all",v:["Required compliance training in week one"]},
  {k:"LastPass",w:"all",v:["Passwords"]},
- {k:"Ignition",w:"all",v:["Outside IT vendor. Tech tickets may be answered by them by email"]},
- {k:"Lattice",w:"all",v:["An older org chart. Use the GiveWell Live Org Chart for the current one"]}
+ {k:"Ignition",w:"all",v:["Outside IT vendor. ",["Tech tickets",L.ticket]," may be answered by them by email"]},
+ {k:["Lattice",L.lattice],w:"all",v:["An older org chart. Use the ",["GiveWell Live Org Chart",L.org]," for the current one"]}
 ];
 var STATS=[
  {big:"6th + 21st",t:"Pay dates",s:"Twice a month"},
@@ -441,7 +447,7 @@ var STATS=[
 ];
 var HOL=["New Year's Day","Martin Luther King Jr. Day","Presidents' Day","Memorial Day","Juneteenth","Independence Day","Labor Day","Columbus Day / Indigenous Peoples' Day","Thanksgiving Day","Friday after Thanksgiving","Christmas Day"];
 var KNOW=[
- {k:"Recording time off",v:["Enter it before payroll runs, or it has to be fixed by hand. Use Paylocity. See the ",["Time Off Policy",L.timeoff]]},
+ {k:"Recording time off",v:["Enter it in ",["Paylocity",L.paylocity]," before payroll runs, or it has to be fixed by hand (",["how-to",L.pto],"). See the ",["Time Off Policy",L.timeoff]]},
  {k:"Money you can spend",v:["Wellness stipend, professional development allowance, phone and internet reimbursement, workstation and coworking budgets. Amounts are in the ",["Expense Policy",L.expense]]},
  {k:"Working late or early",v:["A cab or rideshare is covered before 7:00 or after 8:00 PM for a work reason. Ask your manager first if it will be more than once a month"]},
  {k:"Meals",v:["Covered when traveling, with external partners, and at team events on your manager's budget. Dinner when working late is not listed in the policy"]},
